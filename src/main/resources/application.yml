@@ -1,0 +1,8 @@
+
+#spring线程池
+task-executor:
+  core_pool_size: 5
+  max_pool_size: 10
+  queue-capacity: 20
+  keepalive: 60
+  name-prefix: async-service-

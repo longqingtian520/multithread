@@ -8,7 +8,7 @@ import org.springframework.stereotype.Component;
 public class AsyncTaskExecutor {
 
     public void asyncTask(){
-        System.out.println("异步执行任务 a 开始");
+        System.out.println("异步执行任务 a 开始, threadName:" + Thread.currentThread().getName());
 
         try {
             Thread.sleep(10000);
@@ -16,12 +16,12 @@ public class AsyncTaskExecutor {
             e.printStackTrace();
         }
 
-        System.out.println("异步执行任务 a 结束");
+        System.out.println("异步执行任务 a 结束, threadName:" + Thread.currentThread().getName());
     }
 
 
     public void asyncTaskB(){
-        System.out.println("异步执行任务 b 开始");
+        System.out.println("异步执行任务 b 开始, threadName:" + Thread.currentThread().getName());
 
         try {
             Thread.sleep(8000);
@@ -29,7 +29,7 @@ public class AsyncTaskExecutor {
             e.printStackTrace();
         }
 
-        System.out.println("异步执行任务 b 结束");
+        System.out.println("异步执行任务 b 结束, threadName:" + Thread.currentThread().getName());
     }
 
     public void doTask1(int i) throws InterruptedException{
